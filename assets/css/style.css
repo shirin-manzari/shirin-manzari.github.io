@@ -443,7 +443,7 @@ main {
 }
 
 .article-summary {
-  max-width: 62ch;
+  max-width: 100ch;
   margin-top: 1rem;
   color: var(--muted);
 }
