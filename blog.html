@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lorem ipsum dolor sit amet.">
+  <title>Blog — Shirin Manzari</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Shirin Manzari</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <ul class="nav-list" id="main-nav" data-nav-list>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html" aria-current="page">Blog</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="mailto:shirin.manzari@gmail.com">Email</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="container-wide">
+      <header class="page-header">
+        <h1 class="page-title" data-blog-title>The Grimoire🍀</h1>
+        <p class="page-intro" data-blog-intro>A growing tome of knowledge, spells, and strange discoveries from a tiefling druid exploring the digital wilds.</p>
+      </header>
+
+      <div class="blog-layout">
+        <section>
+          <div class="post-list">
+            <article class="post-card" data-post-tags="Design, Minimalism, UX">
+              <p class="post-meta"><time datetime="2026-05-18">18 May 2026</time></p>
+              <h3 class="post-title"><a href="posts/post-1.html">Lorem ipsum dolor sit amet</a></h3>
+              <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sem at ipsum cursus luctus.</p>
+              <a class="post-link" href="posts/post-1.html">Read more</a>
+            </article>
+          </div>
+          <nav class="pagination" data-pagination aria-label="Blog pagination"></nav>
+        </section>
+
+        <aside class="sidebar" aria-label="Blog sidebar">
+          <section class="side-box" aria-labelledby="archive-title">
+            <h2 class="side-title" id="archive-title">Grimoire Archives</h2>
+            <ul class="side-list" data-archive-list>
+            </ul>
+          </section>
+
+          <section class="side-box" aria-labelledby="links-title">
+            <h2 class="side-title" id="links-title">Mystic Paths</h2>
+            <ul class="side-list">
+              <li><a class="meta-link" target="_blank" href="https://nooshdaroo.ir/tag/زنان-و-فناوری/">Woman and Tech</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-current-year></span> Shirin Manzari</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
