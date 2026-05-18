@@ -436,7 +436,7 @@ main {
 
 .article-title {
   margin-top: 1rem;
-  font-size: clamp(1.7rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 2.15rem);
   line-height: 1.08;
   letter-spacing: -0.045em;
   font-weight: 400;
@@ -466,6 +466,20 @@ main {
   color: var(--muted);
   text-align: justify;
   text-justify: inter-word;
+}
+
+.article-content a {
+  color: hotpink;
+}
+
+.article-content figure {
+  margin: 0;
+}
+
+.article-content img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .article-content ul,
