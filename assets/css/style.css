@@ -37,7 +37,7 @@ body {
 }
 
 ::selection {
-  background: #151515;
+  background: hotpink;
   color: #ffffff;
 }
 
@@ -147,16 +147,17 @@ main {
 .home-card {
   display: grid;
   justify-items: center;
-  width: min(100%, 720px);
+  width: min(100%, 900px);
   text-align: center;
 }
 
 
 .home-name {
-  font-size: clamp(2.2rem, 10vw, 6.4rem);
+  font-size: clamp(2.2rem, 9vw, 5.8rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
-  font-weight: 400;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .home-description {
@@ -189,6 +190,14 @@ main {
   line-height: 1;
   letter-spacing: -0.065em;
   font-weight: 400;
+}
+
+.emoji-icon {
+  display: inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  margin-left: 0.12em;
+  vertical-align: -0.08em;
 }
 
 .page-intro {
