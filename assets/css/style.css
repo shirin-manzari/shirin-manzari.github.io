@@ -37,7 +37,7 @@ body {
 }
 
 ::selection {
-  background: #151515;
+  background: hotpink;
   color: #ffffff;
 }
 
@@ -147,16 +147,17 @@ main {
 .home-card {
   display: grid;
   justify-items: center;
-  width: min(100%, 720px);
+  width: min(100%, 900px);
   text-align: center;
 }
 
 
 .home-name {
-  font-size: clamp(2.2rem, 10vw, 6.4rem);
+  font-size: clamp(2.2rem, 9vw, 5.8rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
-  font-weight: 400;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .home-description {
@@ -179,7 +180,7 @@ main {
 }
 
 .page-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 1.4rem;
   border-bottom: 1px solid var(--line);
 }
@@ -191,8 +192,20 @@ main {
   font-weight: 400;
 }
 
+.page-title[data-blog-title] {
+  white-space: nowrap;
+}
+
+.emoji-icon {
+  display: inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  margin-left: 0.12em;
+  vertical-align: -0.08em;
+}
+
 .page-intro {
-  max-width: 66ch;
+  max-width: 85ch;
   margin-top: 1rem;
   color: var(--muted);
 }
@@ -220,6 +233,10 @@ main {
   gap: 0.55rem;
   padding: 1.35rem 0;
   border-bottom: 1px solid var(--line);
+}
+
+.post-card:first-child {
+  padding-top: 0.45rem;
 }
 
 .post-card:hover .post-title a {

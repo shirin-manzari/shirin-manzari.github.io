@@ -8,7 +8,8 @@ const postsDir = path.join(rootDir, "posts");
 const site = {
   author: "Shirin Manzari",
   email: "shirin.manzari@gmail.com",
-  title: "The Grimoire🍀",
+  title: "The Grimoire",
+  titleIcon: "assets/images/0000.png",
   intro:
     "A growing tome of knowledge, spells, and strange discoveries from a tiefling druid exploring the digital wilds.",
 };
@@ -234,7 +235,7 @@ function renderBlog(posts) {
   <main id="main" class="page">
     <div class="container-wide">
       <header class="page-header">
-        <h1 class="page-title" data-blog-title>${site.title}</h1>
+        <h1 class="page-title" data-blog-title>${site.title}<img class="emoji-icon" src="${site.titleIcon}" alt="🍀" width="64" height="64"></h1>
         <p class="page-intro" data-blog-intro>${site.intro}</p>
       </header>
 

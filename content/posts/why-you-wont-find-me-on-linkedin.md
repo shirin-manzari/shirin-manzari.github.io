@@ -25,7 +25,6 @@ For me, it often feels like everyone is competing in some sort of competition to
 This whole competition for an average person like me feels exhausting and overwhelming. It feels like running on a treadmill to nowhere. It’s the reason I haven’t been able to bring myself to post anything on my account because I always felt like it wouldn’t be LinkedIn-worthy enough to share.
 
 ### My LinkedIn Account got restricted without any clear reason
-
 Despite all of this, I kept my account out of necessity for over 8 years. Like it or not, LinkedIn has become a required part of professional life in the tech industry. At this point, I quit my job and was planning to apply for a better position outside of the country, so the necessity became even higher for me. Inevitably, I started polishing my profile and applying.
 
 But one day, without any warning, I was suddenly logged out and wasn’t able to log in to my account. Just to mention, I had never used any automated tools, engaged in suspicious activities, or broken any rules or professional etiquette in any way. Everything on my account was authentic.
@@ -34,13 +33,11 @@ When I tried to log in, the platform asked me to complete security checks multip
 
 
 ### My ID is Illegible
-
 I think handing over sensitive documents like IDs or passports to a platform that already relies on exposing your data publicly seems riskier than beneficial. Anyway I took the risk and try to verify duo my ID but That’s when I hit a wall, I found out that LinkedIn simply doesn’t accept my Iranian documents. You fellows with powerful passports may never understand the struggle we have, but it was part of this journey for me. 
 
 LinkedIn doesn’t accept my Iranian Identity. So there aren't much option to do. I tried everything. I submitted every form they offered. I reached out on Reddit, Twitter, anywhere I thought I could reach an actual human support, But nothing moved forward.
 
-## There’s No Way Back In
-
+### There’s No Way Back In
 After a couple of months of going in circles, I lost my courage and tried something else: creating a brand‑new one. Maybe, I thought, if I just start fresh, it’ll work. It didn’t.
 
 Every time I created a new account, it was restricted or banned within a few hours. I tried different devices, new email addresses, even slightly different versions of my name. Nothing worked. No real explanation. No real chance to simply exist on the platform.
