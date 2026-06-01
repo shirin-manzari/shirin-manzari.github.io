@@ -1,6 +1,6 @@
 ---
 title: Why You Won't Find Me on LinkedIn
-slug: post-1
+slug: why-you-wont-find-me-on-linkedin
 date: 2025-12-29
 description: The drama between me and LinkedIn, and why we’re never getting back together.
 excerpt: The drama between me and LinkedIn, and why we’re never getting back together.

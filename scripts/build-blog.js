@@ -3,7 +3,6 @@ const path = require("path");
 
 const rootDir = path.resolve(__dirname, "..");
 const contentDir = path.join(rootDir, "content", "posts");
-const postsDir = path.join(rootDir, "posts");
 
 const site = {
   author: "Shirin Manzari",
@@ -20,6 +19,15 @@ function escapeHtml(value) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function slugify(value) {
+  return String(value)
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 function markdownInlineToHtml(value) {
@@ -148,7 +156,7 @@ function readPosts() {
         fs.readFileSync(fullPath, "utf8"),
         file
       );
-      const required = ["title", "slug", "date", "description", "excerpt", "tags"];
+      const required = ["title", "date", "description", "excerpt", "tags"];
 
       required.forEach((key) => {
         if (!data[key]) {
@@ -158,15 +166,21 @@ function readPosts() {
 
       const tags = data.tags.split(",").map((tag) => tag.trim()).filter(Boolean);
       const lang = data.lang || "en";
+      const postSlug = slugify(data.slug || data.title);
+
+      if (!postSlug) {
+        throw new Error(`${file} could not generate a slug`);
+      }
 
       return {
         ...data,
+        slug: postSlug,
         tags,
         lang,
         isRtl: lang === "fa",
         bodyHtml: markdownToHtml(body),
-        url: `posts/${data.slug}.html`,
-        fileName: `${data.slug}.html`,
+        url: `${postSlug}/`,
+        outputDir: path.join(rootDir, postSlug),
       };
     })
     .sort((a, b) => b.date.localeCompare(a.date));
@@ -318,11 +332,11 @@ function renderPost(post) {
 function main() {
   const posts = readPosts();
 
-  fs.mkdirSync(postsDir, { recursive: true });
   fs.writeFileSync(path.join(rootDir, "blog.html"), renderBlog(posts));
 
   posts.forEach((post) => {
-    fs.writeFileSync(path.join(postsDir, post.fileName), renderPost(post));
+    fs.mkdirSync(post.outputDir, { recursive: true });
+    fs.writeFileSync(path.join(post.outputDir, "index.html"), renderPost(post));
   });
 
   console.log(`Generated blog.html and ${posts.length} post page(s).`);
