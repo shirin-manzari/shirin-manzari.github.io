@@ -7,8 +7,10 @@ const contentDir = path.join(rootDir, "content", "posts");
 const site = {
   author: "Shirin Manzari",
   email: "shirin.manzari@gmail.com",
+  url: "https://shirin-manzari.github.io",
   title: "The Grimoire",
   titleIcon: "assets/images/0000.png",
+  socialImage: "assets/images/social-card.png",
   intro:
     "A growing tome of knowledge, spells, and strange discoveries from a tiefling druid exploring the digital wilds.",
 };
@@ -28,6 +30,43 @@ function slugify(value) {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function absoluteUrl(value) {
+  return new URL(value, `${site.url}/`).href;
+}
+
+function socialMeta({
+  title,
+  description,
+  path: pagePath,
+  type = "website",
+  publishedTime,
+  tags = [],
+}) {
+  const pageUrl = absoluteUrl(pagePath);
+  const imageUrl = absoluteUrl(site.socialImage);
+  const articleMeta = type === "article"
+    ? `
+  <meta property="article:published_time" content="${escapeHtml(publishedTime)}">
+  <meta property="article:author" content="${escapeHtml(site.author)}">${tags
+      .map((tag) => `\n  <meta property="article:tag" content="${escapeHtml(tag)}">`)
+      .join("")}`
+    : "";
+
+  return `<link rel="canonical" href="${pageUrl}">
+  <meta property="og:type" content="${type}">
+  <meta property="og:site_name" content="${escapeHtml(site.author)}">
+  <meta property="og:title" content="${escapeHtml(title)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:url" content="${pageUrl}">
+  <meta property="og:image" content="${imageUrl}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="${imageUrl}">${articleMeta}`;
 }
 
 function markdownInlineToHtml(value) {
@@ -238,6 +277,11 @@ function renderBlog(posts) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="${escapeHtml(site.intro)}">
+  ${socialMeta({
+    title: `Blog - ${site.author}`,
+    description: site.intro,
+    path: "blog.html",
+  })}
   <title>Blog — ${site.author}</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -298,6 +342,14 @@ function renderPost(post) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="${escapeHtml(post.description)}">
+  ${socialMeta({
+    title: post.title,
+    description: post.description,
+    path: post.url,
+    type: "article",
+    publishedTime: post.date,
+    tags: post.tags,
+  })}
   <title>${escapeHtml(post.title)} — ${site.author}</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
