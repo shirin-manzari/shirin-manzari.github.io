@@ -3,6 +3,7 @@ const path = require("path");
 
 const rootDir = path.resolve(__dirname, "..");
 const contentDir = path.join(rootDir, "content", "posts");
+const postsDir = path.join(rootDir, "posts");
 
 const site = {
   author: "Shirin Manzari",
@@ -243,8 +244,8 @@ function readPosts() {
         lang,
         isRtl: lang === "fa",
         bodyHtml: markdownToHtml(body),
-        url: `${postSlug}/`,
-        outputDir: path.join(rootDir, postSlug),
+        url: `posts/${postSlug}.html`,
+        fileName: `${postSlug}.html`,
       };
     })
     .sort((a, b) => b.date.localeCompare(a.date));
@@ -409,11 +410,11 @@ function renderPost(post) {
 function main() {
   const posts = readPosts();
 
+  fs.mkdirSync(postsDir, { recursive: true });
   fs.writeFileSync(path.join(rootDir, "blog.html"), renderBlog(posts));
 
   posts.forEach((post) => {
-    fs.mkdirSync(post.outputDir, { recursive: true });
-    fs.writeFileSync(path.join(post.outputDir, "index.html"), renderPost(post));
+    fs.writeFileSync(path.join(postsDir, post.fileName), renderPost(post));
   });
 
   console.log(`Generated blog.html and ${posts.length} post page(s).`);
