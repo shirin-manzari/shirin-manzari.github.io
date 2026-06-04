@@ -70,11 +70,13 @@ function socialMeta({
 }
 
 function markdownInlineToHtml(value) {
-  return escapeHtml(value).replace(
-    /\[([^\]]+)\]\(([^)\s]+)\)/g,
-    (_match, label, href) =>
-      `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`
-  );
+  return escapeHtml(value)
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(
+      /\[([^\]]+)\]\(([^)\s]+)\)/g,
+      (_match, label, href) =>
+        `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`
+    );
 }
 
 function markdownImageToHtml(value) {
