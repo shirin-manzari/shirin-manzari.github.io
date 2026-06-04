@@ -490,6 +490,34 @@ main {
   color: hotpink;
 }
 
+.article-content blockquote {
+  position: relative;
+  margin: 0.4rem 0;
+  padding: 1.05rem 1.2rem 1.05rem 1.65rem;
+  border-left: 3px solid hotpink;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.article-content blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -0.2rem;
+  left: 0.55rem;
+  color: var(--line-strong);
+  font-size: 3rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.article-content blockquote p {
+  color: var(--text);
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.85;
+  text-align: start;
+}
+
 .article-content figure {
   margin: 0;
 }
@@ -554,6 +582,22 @@ main {
 .article-rtl .article-content p,
 .article-rtl .article-content li {
   line-height: 2;
+}
+
+.article-rtl .article-content blockquote {
+  padding: 1.05rem 1.65rem 1.05rem 1.2rem;
+  border-left: 0;
+  border-right: 3px solid hotpink;
+}
+
+.article-rtl .article-content blockquote::before {
+  content: "”";
+  right: 0.55rem;
+  left: auto;
+}
+
+.article-rtl .article-content blockquote p {
+  line-height: 2.05;
 }
 
 .article-rtl .back-link {

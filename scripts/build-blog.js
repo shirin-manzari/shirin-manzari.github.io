@@ -124,6 +124,7 @@ function parseFrontMatter(source, file) {
 function markdownToHtml(markdown) {
   const html = [];
   let paragraphLines = [];
+  let quoteLines = [];
 
   const flushParagraph = () => {
     if (!paragraphLines.length) {
@@ -134,11 +135,21 @@ function markdownToHtml(markdown) {
     paragraphLines = [];
   };
 
+  const flushQuote = () => {
+    if (!quoteLines.length) {
+      return;
+    }
+
+    html.push(`<blockquote><p>${markdownInlineToHtml(quoteLines.join(" "))}</p></blockquote>`);
+    quoteLines = [];
+  };
+
   markdown.split(/\r?\n/).forEach((line) => {
     const text = line.trim();
 
     if (!text) {
       flushParagraph();
+      flushQuote();
       return;
     }
 
@@ -146,32 +157,44 @@ function markdownToHtml(markdown) {
 
     if (imageHtml) {
       flushParagraph();
+      flushQuote();
       html.push(imageHtml);
+      return;
+    }
+
+    if (text.startsWith(">")) {
+      flushParagraph();
+      quoteLines.push(text.replace(/^>\s?/, ""));
       return;
     }
 
     if (text.startsWith("### ")) {
       flushParagraph();
+      flushQuote();
       html.push(`<h3>${markdownInlineToHtml(text.slice(4))}</h3>`);
       return;
     }
 
     if (text.startsWith("## ")) {
       flushParagraph();
+      flushQuote();
       html.push(`<h2>${markdownInlineToHtml(text.slice(3))}</h2>`);
       return;
     }
 
     if (text.startsWith("# ")) {
       flushParagraph();
+      flushQuote();
       html.push(`<h2>${markdownInlineToHtml(text.slice(2))}</h2>`);
       return;
     }
 
+    flushQuote();
     paragraphLines.push(text);
   });
 
   flushParagraph();
+  flushQuote();
 
   return html.join("\n        ");
 }
