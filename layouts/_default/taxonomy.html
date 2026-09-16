@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="list-page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  <ul class="plain-list">
+    {{ range .Pages.ByDate.Reverse }}
+      {{ partial "post-row.html" . }}
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

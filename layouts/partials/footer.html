@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <span class="corner-sticker-frame" aria-hidden="true">
+    {{- $sticker := "assets/images/002.png" -}}
+    {{- $stickerInfo := imageConfig (printf "static/%s" $sticker) -}}
+    <img src="{{ $sticker | relURL }}" alt="" width="{{ $stickerInfo.Width }}" height="{{ $stickerInfo.Height }}" loading="lazy" decoding="async" class="corner-sticker">
+  </span>
+  <hr>
+  <nav aria-label="Footer links">
+    {{ range $index, $item := .Site.Menus.footer }}
+      {{ if $index }}<span class="nav-separator" aria-hidden="true">&middot;</span>{{ end }}
+      <a href="{{ $item.URL }}">{{ $item.Name }}</a>
+    {{ end }}
+  </nav>
+</footer>

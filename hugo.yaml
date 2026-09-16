@@ -1,0 +1,92 @@
+baseURL: https://shirin-manzari.github.io/
+title: Shirin Manzari
+copyright: "Copyright © Shirin Manzari"
+timeZone: Asia/Tehran
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+enableRobotsTXT: true
+summaryLength: 32
+
+pagination:
+  pagerSize: 12
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  page:
+    blog: /blog/:slug/
+
+outputs:
+  home:
+    - HTML
+    - RSS
+  section:
+    - HTML
+    - RSS
+  taxonomy:
+    - HTML
+    - RSS
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    style: github
+    lineNos: false
+
+minify:
+  minifyOutput: true
+
+params:
+  author:
+    name: Shirin Manzari
+    alternateName: شیرین منظری
+    email: shirin.manzari@gmail.com
+    bio: Computer Engineering M.Sc. student, junior researcher, and software developer with 6+ years of experience. Interested in machine learning, AI, software development, embedded systems, technology, books, games, and science fiction.
+  description: Personal blog of Shirin Manzari on software development, AI, machine learning, embedded systems, technology, books, games, sci-fi, and personal notes.
+  ogLocale: en_US
+  social:
+    github: https://github.com/shirin-manzari
+    goodreads: https://www.goodreads.com/user/show/81224485-shirin-manzari
+    letterboxd: https://letterboxd.com/ShirinManzari/
+    x: https://x.com/ShirinManzari
+    instagram: https://instagram.com/shirin_manzari
+
+languages:
+  en:
+    locale: en-us
+    label: English
+    direction: ltr
+    contentDir: content/en
+    weight: 1
+    title: Shirin Manzari
+    params:
+      description: Personal blog of Shirin Manzari on software development, AI, machine learning, embedded systems, technology, books, games, sci-fi, and personal notes.
+      latestPostsTitle: Latest posts
+    menus:
+      main:
+        - name: Home
+          pageRef: /
+          weight: 10
+        - name: Blog
+          pageRef: /blog
+          weight: 20
+      footer:
+        - name: GitHub
+          url: https://github.com/shirin-manzari
+          weight: 20
+        - name: Goodreads
+          url: https://www.goodreads.com/user/show/81224485-shirin-manzari
+          weight: 30
+        - name: Letterboxd
+          url: https://letterboxd.com/ShirinManzari/
+          weight: 40
+        - name: Twitter
+          url: https://x.com/ShirinManzari
+          weight: 50
+        - name: Instagram
+          url: https://instagram.com/shirin_manzari
+          weight: 60

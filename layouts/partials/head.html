@@ -1,0 +1,44 @@
+{{- $description := partial "seo/description.html" . -}}
+{{- $title := cond .IsHome .Site.Title (printf "%s | %s" .Title .Site.Title) -}}
+{{- $canonicalURL := .Params.external_url | default .Permalink -}}
+{{- $image := partial "seo/image.html" . -}}
+{{- $isArticle := and .IsPage (eq .Section "blog") (not .Params.external_url) -}}
+{{- $noindex := or .Params.noindex .Params.external_url (eq .Kind "404") -}}
+{{- $mainCSS := resources.Get "css/main.css" -}}
+{{- $syntaxCSS := resources.Get "css/syntax.css" -}}
+{{- $css := slice $mainCSS $syntaxCSS | resources.Concat "css/site.css" | minify | fingerprint -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ .Site.Params.author.name }}">
+{{ if $noindex }}<meta name="robots" content="noindex, follow">{{ end }}
+<link rel="canonical" href="{{ $canonicalURL }}">
+<title>{{ $title }}</title>
+{{ with .Params.external_url }}<meta http-equiv="refresh" content="0; url={{ . }}">{{ end }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ with .OutputFormats.Get "RSS" -}}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+{{ end -}}
+{{- $locale := .Site.Params.ogLocale | default (replace (.Site.Language.Locale | default .Site.Language.Lang) "-" "_") -}}
+{{ with $locale }}<meta property="og:locale" content="{{ . }}">{{ end }}
+<meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Params.author.name }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ $canonicalURL }}">
+{{ with $image.url -}}
+<meta property="og:image" content="{{ . }}">
+{{ with $image.width }}<meta property="og:image:width" content="{{ . }}">{{ end }}
+{{ with $image.height }}<meta property="og:image:height" content="{{ . }}">{{ end }}
+{{ end -}}
+<meta name="twitter:card" content="{{ if $image.url }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{ with $image.url }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+{{ if $isArticle -}}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ if .Lastmod.After .Date }}<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+<meta property="article:author" content="{{ .Site.Params.author.name }}">
+{{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">{{ end }}
+{{ end -}}
+{{ partial "jsonld.html" . }}

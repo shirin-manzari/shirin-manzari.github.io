@@ -1,0 +1,18 @@
+{{- $description := "" -}}
+{{- with .Params.description -}}
+  {{- $description = . | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- end -}}
+{{- if not $description -}}
+  {{- with .Summary -}}
+    {{- $summary := . | plainify | htmlUnescape | strings.TrimSpace -}}
+    {{- if $summary -}}
+      {{- $description = $summary -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $description -}}
+  {{- with .Site.Params.description -}}
+    {{- $description = . | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- end -}}
+{{- end -}}
+{{- return ($description | truncate 160) -}}

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.Direction | default "ltr" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="site lang-{{ .Site.Language.Lang }}">
+    <a class="skip-link" href="#main">{{ i18n "skipToContent" | default "Skip to content" }}</a>
+    {{ partial "header.html" . }}
+    <main id="main" class="site-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

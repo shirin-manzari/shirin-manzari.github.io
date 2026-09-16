@@ -1,0 +1,10 @@
+---
+title: "Learning from Inequality: Is AI Really Unbiased? (fa)"
+date: 2025-12-01
+description: ""
+slug: "bias-in-ai"
+tags:
+  - Feminism
+external_url: "https://nooshdaroo.ir/digital-literacy/ai-bias-gender-race-age/"
+draft: false
+---

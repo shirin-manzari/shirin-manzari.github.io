@@ -1,6 +1,23 @@
-resume.html
-posts/post-3.html
-posts/post-4.html
-posts/post-5.html
-posts/post-6.html
-posts/post-7.html
+# Hugo build output
+public/
+resources/
+.hugo_build.lock
+
+# Local Hugo server files
+.hugo-server.*
+.migration-cache/
+
+# Local environment files
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp

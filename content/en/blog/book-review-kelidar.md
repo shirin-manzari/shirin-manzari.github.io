@@ -1,11 +1,13 @@
 ---
-title: یادداشتی بر مجموعه‌ی کلیدر
-slug: klidar-review
+title: "Book Review: Kelidar (fa)"
 date: 2026-06-04
-description: تجربه و نظر شخصی درباره‌ی مجموعه‌ی داستانی کلیدر از مجموعه دولت آبادی
-excerpt: تجربه و نظر شخصی درباره‌ی مجموعه‌ی داستانی کلیدر از محمود دولت آبادی
-tags: کتاب
-lang: fa
+description: "تجربه و نظر شخصی درباره‌ی مجموعه‌ی داستانی کلیدر از مجموعه دولت آبادی"
+slug: "book-review-kelidar"
+tags: 
+  - Book
+content_language: "fa"
+selected: false
+draft: false
 ---
 
 

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article class="home-content">
+  {{ .Content }}
+
+  {{ $latest := where .Site.RegularPages.ByDate.Reverse "Section" "blog" }}
+
+  {{ if gt (len $latest) 0 }}
+    <hr>
+    <section class="latest-posts" aria-labelledby="latest-posts">
+      <h2 id="latest-posts">{{ .Site.Params.latestPostsTitle | default "Latest posts" }}</h2>
+      <ul class="latest-post-list">
+        {{ range first 10 $latest }}
+          <li>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02 2006" }}</time>
+            <span class="post-separator" aria-hidden="true">&middot;</span>
+            {{ partial "post-link.html" . }}
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+</article>
+{{ end }}

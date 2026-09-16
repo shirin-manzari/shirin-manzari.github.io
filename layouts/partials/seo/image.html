@@ -1,0 +1,33 @@
+{{- $page := . -}}
+{{- $src := "" -}}
+{{- with .Params.image -}}
+  {{- $src = . -}}
+{{- else -}}
+  {{- with .Params.images -}}
+    {{- $src = index . 0 -}}
+  {{- else -}}
+    {{- with .Site.Params.ogImage -}}
+      {{- $src = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $image := dict -}}
+{{- if $src -}}
+  {{- if or (strings.HasPrefix $src "https://") (strings.HasPrefix $src "http://") -}}
+    {{- $image = dict "url" $src -}}
+  {{- else -}}
+    {{- $cleanSrc := strings.TrimPrefix "/" $src -}}
+    {{- $staticPath := printf "static/%s" $cleanSrc -}}
+    {{- $resource := or ($page.Resources.GetMatch $src) ($page.Resources.GetMatch $cleanSrc) -}}
+    {{- with $resource -}}
+      {{- $image = dict "url" .Permalink "width" .Width "height" .Height -}}
+    {{- else -}}
+      {{- if fileExists $staticPath -}}
+        {{- $config := imageConfig $staticPath -}}
+        {{- $image = dict "url" ($src | absURL) "width" $config.Width "height" $config.Height -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $image -}}

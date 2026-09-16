@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="blog-index">
+  <h1>Posts</h1>
+
+  {{ $pages := .RegularPages.ByDate.Reverse }}
+  {{ if $pages }}
+    {{ range $pages.GroupByDate "2006" }}
+      <h3>{{ .Key }}</h3>
+      <ul class="latest-posts">
+        {{ range .Pages }}
+          <li>
+            <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02" }}</time>
+            <span aria-hidden="true">&middot;</span>
+            {{ partial "post-link.html" . }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  {{ else }}
+    <p>No posts yet.</p>
+  {{ end }}
+</section>
+{{ end }}

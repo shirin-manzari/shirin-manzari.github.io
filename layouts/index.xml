@@ -1,0 +1,26 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ .Site.Params.description | html }}</description>
+    <generator>Hugo</generator>
+    <language>{{ .Site.Language.Locale }}</language>
+    <managingEditor>{{ .Site.Params.author.email }} ({{ .Site.Params.author.name }})</managingEditor>
+    <webMaster>{{ .Site.Params.author.email }} ({{ .Site.Params.author.name }})</webMaster>
+    <copyright>{{ .Site.Copyright }}</copyright>
+    <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml" />
+    {{ range where .Site.RegularPages.ByDate.Reverse "Section" "blog" }}
+    {{ $postURL := .Params.external_url | default .Permalink }}
+    {{ $description := partial "seo/description.html" . }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ $postURL }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <author>{{ .Site.Params.author.email }} ({{ .Site.Params.author.name }})</author>
+      <guid>{{ $postURL }}</guid>
+      <description>{{ $description | html }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

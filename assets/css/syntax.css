@@ -1,0 +1,83 @@
+.highlight {
+  margin-block: 0 1.1rem;
+}
+
+.highlight pre {
+  margin: 0;
+}
+
+.chroma {
+  color: #24292f;
+  background: var(--surface);
+}
+
+.chroma .k,
+.chroma .kc,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .kt {
+  color: #cf222e;
+}
+
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .dl,
+.chroma .sd,
+.chroma .s2,
+.chroma .se,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .s1,
+.chroma .ss {
+  color: #0a3069;
+}
+
+.chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs,
+.chroma .cp,
+.chroma .cpf {
+  color: #6e7781;
+}
+
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo {
+  color: #0550ae;
+}
+
+.chroma .na,
+.chroma .nc,
+.chroma .nd,
+.chroma .ne,
+.chroma .nf,
+.chroma .fm,
+.chroma .nt {
+  color: #8250df;
+}
+
+.chroma .o,
+.chroma .ow {
+  color: #0550ae;
+}
+
+.chroma .gd {
+  color: #82071e;
+  background: #ffebe9;
+}
+
+.chroma .gi {
+  color: #116329;
+  background: #dafbe1;
+}

@@ -1,0 +1,24 @@
+{{- $profileURL := .Site.BaseURL -}}
+{{- $sameAs := slice -}}
+{{- range .Site.Params.social -}}
+  {{- with . -}}
+    {{- $sameAs = $sameAs | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $author := dict
+  "@type" "Person"
+  "@id" (printf "%s#person" $profileURL)
+  "name" .Site.Params.author.name
+  "url" $profileURL
+  "description" .Site.Params.author.bio
+-}}
+{{- with .Site.Params.author.alternateName -}}
+  {{- $author = merge $author (dict "alternateName" .) -}}
+{{- end -}}
+{{- with .Site.Params.author.email -}}
+  {{- $author = merge $author (dict "email" (printf "mailto:%s" .)) -}}
+{{- end -}}
+{{- if gt (len $sameAs) 0 -}}
+  {{- $author = merge $author (dict "sameAs" $sameAs) -}}
+{{- end -}}
+{{- return $author -}}

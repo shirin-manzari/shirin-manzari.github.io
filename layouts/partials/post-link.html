@@ -1,0 +1,2 @@
+{{- $url := .Params.external_url | default .RelPermalink -}}
+<a href="{{ $url }}"{{ with .Params.external_url }} rel="noopener noreferrer" target="_blank"{{ end }}>{{ .Title }}</a>

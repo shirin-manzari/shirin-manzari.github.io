@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.Direction | default "ltr" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="site lang-{{ .Site.Language.Lang }} error-page">
+    <main class="error-main" aria-label="Page not found">
+      {{- $sticker := "assets/images/002.png" -}}
+      {{- $stickerInfo := imageConfig (printf "static/%s" $sticker) -}}
+      <a class="error-link" href="{{ "/" | relLangURL }}" aria-label="Go home">
+        <span class="error-code">
+          <span>4</span><img src="{{ $sticker | relURL }}" alt="0" width="{{ $stickerInfo.Width }}" height="{{ $stickerInfo.Height }}" class="error-zero"><span>4</span>
+        </span>
+      </a>
+    </main>
+  </body>
+</html>

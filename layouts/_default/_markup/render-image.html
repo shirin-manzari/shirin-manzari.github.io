@@ -1,0 +1,19 @@
+{{- $src := .Destination -}}
+{{- $config := dict -}}
+{{- if not (or (strings.HasPrefix $src "https://") (strings.HasPrefix $src "http://")) -}}
+  {{- $cleanSrc := strings.TrimPrefix "/" $src -}}
+  {{- $staticPath := printf "static/%s" $cleanSrc -}}
+  {{- $resource := or (.Page.Resources.GetMatch $src) (.Page.Resources.GetMatch $cleanSrc) -}}
+  {{- with $resource -}}
+    {{- $config = dict "width" .Width "height" .Height -}}
+  {{- else -}}
+    {{- if fileExists $staticPath -}}
+      {{- $imageInfo := imageConfig $staticPath -}}
+      {{- $config = dict "width" $imageInfo.Width "height" $imageInfo.Height -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<figure>
+  <img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with $config.width }} width="{{ . }}"{{ end }}{{ with $config.height }} height="{{ . }}"{{ end }} loading="lazy" decoding="async">
+  {{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

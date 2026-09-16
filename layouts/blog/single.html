@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{ with .Params.external_url }}
+<article class="post-content">
+  <header class="post-header">
+    <h1>{{ $.Title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ $.Date.Format "2006-01-02" }}">{{ $.Date.Format "January 2, 2006" }}</time>
+    </p>
+  </header>
+  <hr>
+  <div class="article-body">
+    <p><a href="{{ . }}">Continue to the original post</a></p>
+  </div>
+</article>
+{{ else }}
+{{ $contentLang := .Params.content_language | default .Language.Lang }}
+{{ $contentDir := cond (eq $contentLang "fa") "rtl" (.Language.Direction | default "ltr") }}
+<article class="post-content">
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </p>
+  </header>
+  <hr>
+  <div class="article-body" lang="{{ $contentLang }}" dir="{{ $contentDir }}">
+    {{ .Content }}
+  </div>
+  {{ with .Params.tags }}
+    <footer class="post-tags" aria-label="Post tags">
+      {{ range . }}
+        <a href="{{ (printf "tags/%s/" (. | urlize)) | relLangURL }}">#{{ . }}</a>
+      {{ end }}
+    </footer>
+  {{ end }}
+</article>
+{{ end }}
+{{ end }}
