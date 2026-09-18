@@ -11,6 +11,10 @@ resources/
 .env
 .env.*
 
+# Local documentation drafts
+README.md
+HOW_TO_POST.md
+
 # OS/editor files
 .DS_Store
 Thumbs.db
