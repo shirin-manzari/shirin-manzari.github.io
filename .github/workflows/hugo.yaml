@@ -13,11 +13,19 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_ENVIRONMENT: production
+      HUGO_ENV: production
+      TZ: Asia/Tehran
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,6 +44,13 @@ jobs:
 
       - name: Build
         run: hugo --gc --minify --cleanDestinationDir --environment production
+
+      - name: Verify Hugo output
+        run: |
+          test -f public/index.html
+          test -f public/.nojekyll
+          grep -q 'Personal blog of Shirin Manzari' public/index.html
+          grep -q '/css/site.min' public/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
