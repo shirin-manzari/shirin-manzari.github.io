@@ -27,7 +27,7 @@ At the same time, I worry about many things. Many jobs could disappear or become
 
 Although some people might see these concerns as coming from insecurity, I don’t think that’s really the case for me. I see myself as a generalist engineer, not simply a coder, and I’ve always been open to switching careers or exploring something new. As a software developer, I’ve gotten used to learning on a daily basis just to stay relevant. For me, the bigger issue is the uncertainty of the situation. It’s also becoming increasingly difficult to keep up with the constant waves of new technology, tools, and ideas appearing every day.
 
-But the main concern I’ve had since the early days is the culture around using AI, and how easily that can lead to misuse, as recent reports from Anthropic have also shown.
+But the main concern I’ve had since the early days is the culture around using AI, and how easily that can lead to misuse, as recent reports from [Anthropic](https://www.anthropic.com/threat-intelligence-report-september-2026) have also shown.
 
 Honestly, unlike many of the trends and conspiracy theories surrounding AI and the companies behind it, I mostly see those as part of marketing competition and power struggles. Despite all of that, I’m genuinely optimistic about a future where AI can make human life much easier.  
 

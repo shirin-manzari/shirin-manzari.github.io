@@ -5,6 +5,7 @@ description: ""
 slug: "bias-in-ai"
 tags:
   - Feminism
+  - AI
 external_url: "https://nooshdaroo.ir/digital-literacy/ai-bias-gender-race-age/"
 draft: false
 ---

@@ -5,6 +5,7 @@ description: ""
 slug: "gender-data-gap"
 tags:
   - Feminism
+  - AI
 external_url: "https://nooshdaroo.ir/digital-literacy/gender-data-gap/"
 draft: false
 ---
