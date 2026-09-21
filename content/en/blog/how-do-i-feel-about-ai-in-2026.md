@@ -1,5 +1,5 @@
 ---
-title: "How do I feel about AI in 2026?"
+title: "How Do I Feel About AI in 2026?"
 date: 2026-09-17
 description: " "
 slug: how-do-i-feel-about-ai-in-2026
