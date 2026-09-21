@@ -7,8 +7,10 @@ tags: []
 content_language: "en"
 selected: false
 # external_url: ""
-draft: true
-refrence: https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00638/119630/Lost-in-the-Middle-How-Language-Models-Use-Long
+draft: false
+references:
+  - title: "Lost in the Middle: How Language Models Use Long Contexts"
+    url: "https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00638/119630/Lost-in-the-Middle-How-Language-Models-Use-Long"
 ---
 If one model supports a 30,000-token context window and another supports a million, the second one probably sounds better to you. More context means access to more information, so it must be smarter? Well, not always.
 
