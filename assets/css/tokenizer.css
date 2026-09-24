@@ -4,12 +4,10 @@
   --tk-muted: #595959;
   --tk-border: var(--soft, #8b8b8b);
   --tk-chip-border: rgb(30 64 100 / 10%);
-  --tk-chip-1: #dbeafe;
-  --tk-chip-2: #dcfce7;
-  --tk-chip-3: #ffedd5;
-  --tk-chip-4: #f3e8ff;
-  --tk-chip-5: #fce7f3;
-  --tk-chip-6: #ccfbf1;
+  --tk-chip-1: #f9d6e9;
+  --tk-chip-2: #d9e8fa;
+  --tk-chip-3: #deedcf;
+  --tk-chip-4: #f6e3b8;
   margin-block: 1.5rem;
   padding: clamp(0.85rem, 3vw, 1.25rem);
   border: 1px solid var(--tk-border);
@@ -66,7 +64,7 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: 0.3rem;
+  gap: 0.25rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -80,19 +78,18 @@
   max-width: 100%;
   min-width: 0;
   margin: 0;
-  padding: 0.2rem 0.4rem;
+  padding: 0.15rem 0.3rem;
   border: 1px solid var(--tk-chip-border);
   border-radius: 0.35rem;
   background: var(--tk-chip-1);
   color: var(--tk-text);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
   overflow-wrap: anywhere;
 }
-.tokenizer__token:nth-child(6n + 2) { background: var(--tk-chip-2); }
-.tokenizer__token:nth-child(6n + 3) { background: var(--tk-chip-3); }
-.tokenizer__token:nth-child(6n + 4) { background: var(--tk-chip-4); }
-.tokenizer__token:nth-child(6n + 5) { background: var(--tk-chip-5); }
-.tokenizer__token:nth-child(6n + 6) { background: var(--tk-chip-6); }
+.tokenizer__token:nth-child(4n + 2) { background: var(--tk-chip-2); }
+.tokenizer__token:nth-child(4n + 3) { background: var(--tk-chip-3); }
+.tokenizer__token:nth-child(4n + 4) { background: var(--tk-chip-4); }
 .tokenizer__token bdi {
   font-weight: 600;
   white-space: pre-wrap;
@@ -109,12 +106,10 @@
     --tk-text: #f6eee3;
     --tk-muted: #cec5cd;
     --tk-chip-border: rgb(255 255 255 / 14%);
-    --tk-chip-1: #294668;
-    --tk-chip-2: #2a503b;
-    --tk-chip-3: #604629;
-    --tk-chip-4: #4a3864;
-    --tk-chip-5: #60374f;
-    --tk-chip-6: #24514e;
+    --tk-chip-1: #583348;
+    --tk-chip-2: #29485e;
+    --tk-chip-3: #354c30;
+    --tk-chip-4: #584424;
     color-scheme: dark;
   }
 }

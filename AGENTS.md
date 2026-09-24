@@ -13,7 +13,7 @@ tokenizer style in `assets/css/tokenizer.css` and
   including inputs and generated results; avoid monospace overrides for Persian.
 - Use a compact heading, simple inputs, and text-style example/reset buttons.
   Keep controls keyboard accessible with clear focus and adequate touch targets.
-- Use pastel blue, mint, peach, lavender, pink, and teal for colored results,
+- Use the original soft pink, blue, green, and gold palette for colored results,
   with thin tinted borders and rounded corners, following the tokenizer reference.
   Keep token chips small and the surrounding results list borderless.
   Maintain readable text contrast in both themes.
