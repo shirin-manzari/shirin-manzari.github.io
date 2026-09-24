@@ -9,7 +9,10 @@
   --measure: 800px;
   --page-gutter: clamp(1rem, 4vw, 1.5rem);
   --font-body: "Segoe UI", sans-serif;
-  --font-mono: "Segoe UI", sans-serif;
+  --font-mono: Consolas, "Liberation Mono", "Segoe UI", monospace;
+  --code-bg: #f0e5d8;
+  --code-inline-bg: #fff;
+  --code-ink: var(--text);
   --font-date: "Courier New", Courier, monospace;
 }
 
@@ -435,23 +438,30 @@ samp {
 }
 
 :not(pre) > code {
-  padding: 0.08rem 0.25rem;
-  background: var(--surface);
-  border: 1px solid var(--line);
+  padding: 0.12em 0.35em;
+  background: var(--code-inline-bg);
+  color: var(--code-ink);
+  border-radius: 0.2rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 pre {
   max-width: 100%;
   overflow-x: auto;
   padding: 0.9rem 1rem;
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: var(--code-bg);
+  color: var(--text);
+  border: 1px solid #dfd0c0;
+  border-inline-start: 3px solid var(--accent);
+  border-radius: 0.3rem;
   line-height: 1.55;
   -webkit-overflow-scrolling: touch;
 }
 
 pre code {
   font-size: 0.9rem;
+  overflow-wrap: normal;
 }
 
 figure {

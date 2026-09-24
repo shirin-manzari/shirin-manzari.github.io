@@ -14,8 +14,7 @@ assets/jsconfig.json
 
 # Local documentation drafts
 README.md
-HOW_TO_POST.md
-docs/tokenizer.md
+/docs/
 
 # OS/editor files
 .DS_Store
