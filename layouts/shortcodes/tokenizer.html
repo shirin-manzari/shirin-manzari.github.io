@@ -1,0 +1,24 @@
+{{- $id := printf "tokenizer-%d" .Ordinal -}}
+{{- $worker := resources.Get "js/tokenizer/worker.js" | js.Build (dict "targetPath" "js/tokenizer-worker.js" "minify" true "target" "es2020") | fingerprint -}}
+<section class="tokenizer" data-tokenizer data-worker="{{ $worker.RelPermalink }}" aria-labelledby="{{ $id }}-title" lang="en" dir="ltr">
+  <div class="tokenizer__heading">
+    <h3 id="{{ $id }}-title">Token playground</h3>
+    <span class="tokenizer__caption">o200k_base</span>
+  </div>
+  <label class="tokenizer__sr-only" for="{{ $id }}-input">Text to tokenize</label>
+  <textarea id="{{ $id }}-input" rows="3" maxlength="20000" dir="auto" spellcheck="false" placeholder="Type or paste text…" aria-describedby="{{ $id }}-help">Hello, world! Words aren't always tokens.</textarea>
+  <div class="tokenizer__actions" role="group" aria-label="Example texts and reset">
+    <button type="button" data-example="english">English</button>
+    <button type="button" data-example="persian">Persian</button>
+    <button type="button" data-example="emoji">Emojis</button>
+    <button type="button" data-example="code">Code</button>
+    <button type="button" data-clear>Clear</button>
+  </div>
+  <p class="tokenizer__status" role="status" aria-live="polite" aria-atomic="true" data-status>Scroll here to load the tokenizer.</p>
+  <ol class="tokenizer__tokens" role="list" aria-label="Tokens in encoding order" tabindex="0" data-tokens></ol>
+  <details class="tokenizer__help">
+    <summary>How to read the tokens</summary>
+    <p id="{{ $id }}-help">Each color marks a token, with its ID below. Spaces appear as ␠, line breaks as ↵, and tabs as ⇥. Incomplete Unicode bytes appear as \xHH; adjacent tokens complete the character. Invisible controls appear as \u{…}. Up to 20,000 characters, processed privately in your browser.</p>
+  </details>
+  <noscript>Enable JavaScript to use this client-side tokenizer.</noscript>
+</section>

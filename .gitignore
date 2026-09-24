@@ -2,6 +2,7 @@
 public/
 resources/
 .hugo_build.lock
+assets/jsconfig.json
 
 # Local Hugo server files
 .hugo-server.*
@@ -14,6 +15,7 @@ resources/
 # Local documentation drafts
 README.md
 HOW_TO_POST.md
+docs/tokenizer.md
 
 # OS/editor files
 .DS_Store

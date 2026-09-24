@@ -16,6 +16,12 @@
 <title>{{ $title }}</title>
 {{ with .Params.external_url }}<meta http-equiv="refresh" content="0; url={{ . }}">{{ end }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ if .HasShortcode "tokenizer" }}
+{{ $tokenizerCSS := resources.Get "css/tokenizer.css" | minify | fingerprint }}
+{{ $tokenizerJS := resources.Get "js/tokenizer/playground.js" | js.Build (dict "targetPath" "js/tokenizer.js" "minify" true "target" "es2020") | fingerprint }}
+<link rel="stylesheet" href="{{ $tokenizerCSS.RelPermalink }}" integrity="{{ $tokenizerCSS.Data.Integrity }}">
+<script defer src="{{ $tokenizerJS.RelPermalink }}" integrity="{{ $tokenizerJS.Data.Integrity }}"></script>
+{{ end }}
 {{ with .OutputFormats.Get "RSS" -}}
 <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
 {{ end -}}

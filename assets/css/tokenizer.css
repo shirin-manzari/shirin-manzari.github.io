@@ -1,0 +1,120 @@
+.tokenizer {
+  --tk-bg: #fff;
+  --tk-text: var(--text, #151515);
+  --tk-muted: #595959;
+  --tk-border: var(--soft, #8b8b8b);
+  --tk-chip-border: rgb(30 64 100 / 10%);
+  --tk-chip-1: #dbeafe;
+  --tk-chip-2: #dcfce7;
+  --tk-chip-3: #ffedd5;
+  --tk-chip-4: #f3e8ff;
+  --tk-chip-5: #fce7f3;
+  --tk-chip-6: #ccfbf1;
+  margin-block: 1.5rem;
+  padding: clamp(0.85rem, 3vw, 1.25rem);
+  border: 1px solid var(--tk-border);
+  border-radius: 0.5rem;
+  background: var(--tk-bg);
+  color: var(--tk-text);
+  font-family: var(--font-body, sans-serif);
+  font-weight: 400;
+  line-height: 1.6;
+  min-width: 0;
+  max-width: 100%;
+  color-scheme: light;
+}
+.tokenizer__heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1rem; margin-bottom: 0.75rem; }
+.tokenizer h3 { margin: 0; font-size: 1rem; font-weight: 600; }
+.tokenizer .tokenizer__caption { color: var(--tk-muted); font-size: 0.75rem; }
+.tokenizer__sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.tokenizer textarea {
+  display: block;
+  width: 100%;
+  min-height: 6rem;
+  max-width: 100%;
+  resize: vertical;
+  border: 1px solid var(--tk-border);
+  border-radius: 0.3rem;
+  padding: 0.75rem;
+  background: var(--tk-bg);
+  color: var(--tk-text);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.tokenizer__actions { display: flex; flex-wrap: wrap; gap: 0 0.75rem; margin-block: 0.2rem 0.75rem; }
+.tokenizer button {
+  min-height: 44px;
+  padding: 0.25rem 0.2rem;
+  border: 0;
+  background: transparent;
+  color: var(--tk-muted);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.tokenizer button[data-clear] { margin-inline-start: auto; }
+.tokenizer button:hover { color: var(--tk-text); text-decoration: underline; text-decoration-color: var(--accent, hotpink); text-underline-offset: 4px; }
+.tokenizer :is(button, textarea, ol, summary):focus-visible { outline: 2px solid var(--accent, hotpink); outline-offset: 3px; }
+.tokenizer .tokenizer__help { font-size: 0.8rem; color: var(--tk-muted); margin-block: 1rem 0; }
+.tokenizer__help summary { cursor: pointer; width: fit-content; padding-block: 0.35rem; }
+.tokenizer__help p { margin: 0.5rem 0 0; }
+.tokenizer .tokenizer__status { font-size: 0.85rem; font-weight: 600; margin-block: 0 0.6rem; }
+.tokenizer .tokenizer__tokens {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-height: 3rem;
+  max-height: 28rem;
+  overflow: auto;
+}
+.tokenizer .tokenizer__token {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--tk-chip-border);
+  border-radius: 0.35rem;
+  background: var(--tk-chip-1);
+  color: var(--tk-text);
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+.tokenizer__token:nth-child(6n + 2) { background: var(--tk-chip-2); }
+.tokenizer__token:nth-child(6n + 3) { background: var(--tk-chip-3); }
+.tokenizer__token:nth-child(6n + 4) { background: var(--tk-chip-4); }
+.tokenizer__token:nth-child(6n + 5) { background: var(--tk-chip-5); }
+.tokenizer__token:nth-child(6n + 6) { background: var(--tk-chip-6); }
+.tokenizer__token bdi {
+  font-weight: 600;
+  white-space: pre-wrap;
+  unicode-bidi: isolate;
+}
+.tokenizer__id {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+@media (prefers-color-scheme: dark) {
+  .tokenizer {
+    --tk-bg: #211f23;
+    --tk-text: #f6eee3;
+    --tk-muted: #cec5cd;
+    --tk-chip-border: rgb(255 255 255 / 14%);
+    --tk-chip-1: #294668;
+    --tk-chip-2: #2a503b;
+    --tk-chip-3: #604629;
+    --tk-chip-4: #4a3864;
+    --tk-chip-5: #60374f;
+    --tk-chip-6: #24514e;
+    color-scheme: dark;
+  }
+}

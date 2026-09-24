@@ -29,7 +29,7 @@ The same goes for large language models. They operate inside a limited working a
 
 Tokens are the units the model uses to represent this information. Just as a bigger desk gives you room for more books and tools, a larger context window allows a model to work with more information at once.
 
-## The problem with bigger desks
+## The Problem with Bigger Desks
 Imagine your desk covered with hundreds of books, papers, notes, and tools. The note you need might be somewhere on that desk, but finding it among everything else becomes harder. At some point it’s not efficient anymore.
 
 Imagine giving a thousand-page manual to an AI just to answer a few questions, sharing an entire source-code repository just to generate code that fits the project, or keeping every message from a very long conversation in its context.
@@ -52,7 +52,7 @@ More context may contain irrelevant or outdated information, noisy data, duplica
 
 Also don’t forget that tokens aren’t free. Larger prompts require more processing and obviously more tokens, more usage memory, and more latency. Imagine processing a million tokens every time someone asks a question that could have been answered using a fraction of that. Even if the final answer were identical, one approach is doing considerably more work and has more engineering cost.
 
-## what is the solution?
+## What Is the Solution?
 Maybe the easiest way to think about context is not as storage, but as working memory. We already have databases, filesystems, search engines, vector databases, and object storage for keeping large amounts of information.
 
 The context window doesn’t need to replace them, but instead, it can contain the information the model needs right now. Just like the desk example, you might own hundreds of books in your library. But that doesn’t mean you need to put all of the books on your desk every time you sit down to work or study. You can just cherry-pick a few books relevant to your current topic. We call this **Context Engineering**.
