@@ -1,6 +1,7 @@
 ---
 title: "Book Review: Kelidar (fa)"
 date: 2026-06-04
+pinned: false
 description: "تجربه و نظر شخصی درباره‌ی مجموعه‌ی داستانی کلیدر از مجموعه دولت آبادی"
 slug: "book-review-kelidar"
 tags: 

@@ -1,6 +1,7 @@
 ---
 title: "How Do I Feel About AI in 2026?"
 date: 2026-09-17
+pinned: false
 description: " "
 slug: how-do-i-feel-about-ai-in-2026
 tags:

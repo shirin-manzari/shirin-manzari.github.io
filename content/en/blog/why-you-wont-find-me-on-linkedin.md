@@ -1,6 +1,7 @@
 ---
 title: "Why You Won't Find Me on LinkedIn"
 date: 2025-12-29
+pinned: false
 description: "The drama between me and LinkedIn, and why we’re never getting back together."
 slug: why-you-wont-find-me-on-linkedin
 tags:

@@ -1,6 +1,7 @@
 ---
 title: "Bigger Isn’t Always Better When It Comes to Context Windows"
 date: 2026-09-21
+pinned: false
 description: ""
 slug: "bigger-is-not-always-better-context-window"
 tags: 

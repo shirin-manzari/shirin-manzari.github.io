@@ -3,6 +3,9 @@
   {{ .Content }}
 
   {{ $latest := where .Site.RegularPages.ByDate.Reverse "Section" "blog" }}
+  {{ $pinned := where $latest "Params.pinned" true }}
+  {{ $unpinned := where $latest "Params.pinned" "!=" true }}
+  {{ $latest = append $unpinned $pinned }}
 
   {{ if gt (len $latest) 0 }}
     <hr>

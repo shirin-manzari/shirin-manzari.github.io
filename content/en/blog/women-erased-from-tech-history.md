@@ -1,6 +1,7 @@
 ---
 title: "Invisible Women: Erased from Tech History (fa)"
 date: 2025-09-15
+pinned: false
 description: ""
 slug: "women-erased-from-tech-history"
 tags:

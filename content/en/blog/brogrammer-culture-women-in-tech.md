@@ -1,6 +1,7 @@
 ---
 title: "Brogrammer Culture in Tech (fa)"
 date: 2025-10-13
+pinned: false
 description: ""
 slug: "brogrammer-culture-women-in-tech"
 tags:

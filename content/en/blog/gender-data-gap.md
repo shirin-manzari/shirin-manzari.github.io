@@ -1,6 +1,7 @@
 ---
 title: "Why Are Women Missing from the Data? (fa)"
 date: 2026-06-01
+pinned: false
 description: ""
 slug: "gender-data-gap"
 tags:
