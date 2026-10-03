@@ -87,6 +87,6 @@ languages:
         - name: Twitter
           url: https://x.com/ShirinManzari
           weight: 50
-        - name: Instagram
-          url: https://instagram.com/shirin_manzari
+        - name: Library
+          url: https://shirin-manzari.github.io/the-tiny-library/
           weight: 60
