@@ -6,7 +6,7 @@
   <body class="site lang-{{ .Site.Language.Lang }}">
     <a class="skip-link" href="#main">{{ i18n "skipToContent" | default "Skip to content" }}</a>
     {{ partial "header.html" . }}
-    <main id="main" class="site-main">
+    <main id="main" class="site-main{{ if .IsHome }} site-main-home{{ end }}">
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}

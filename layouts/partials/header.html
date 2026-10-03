@@ -1,9 +1,7 @@
 <header class="site-header">
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar-left">
-        {{- $sticker := "assets/images/003.png" -}}
-        {{- $stickerInfo := imageConfig (printf "static/%s" $sticker) -}}
-        <img src="{{ $sticker | relURL }}" alt="" width="{{ $stickerInfo.Width }}" height="{{ $stickerInfo.Height }}" class="header-sticker">
+      <a class="navbar-name" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.author.name }}</a>
     </div>
     <div class="navbar-right">
       {{ range .Site.Menus.main }}

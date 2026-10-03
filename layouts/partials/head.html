@@ -16,6 +16,9 @@
 <title>{{ $title }}</title>
 {{ with .Params.external_url }}<meta http-equiv="refresh" content="0; url={{ . }}">{{ end }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap">
 {{ if .HasShortcode "tokenizer" }}
 {{ $tokenizerCSS := resources.Get "css/tokenizer.css" | minify | fingerprint }}
 {{ $tokenizerJS := resources.Get "js/tokenizer/playground.js" | js.Build (dict "targetPath" "js/tokenizer.js" "minify" true "target" "es2020") | fingerprint }}
