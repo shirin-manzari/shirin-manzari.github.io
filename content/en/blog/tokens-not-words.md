@@ -4,7 +4,8 @@ date: 2025-11-20
 pinned: false
 description: ""
 slug: "tokens-not-words"
-tags: []
+tags:
+  - AI
 content_language: "en"
 selected: false
 # external_url: ""
