@@ -343,6 +343,7 @@ li {
 
 .post-header h1 {
   margin-block-end: 0.35rem;
+  font-size: clamp(1.5rem, 1.35rem + 0.65vw, 1.75rem);
 }
 
 .post-meta {
