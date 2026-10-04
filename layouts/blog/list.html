@@ -1,7 +1,5 @@
 {{ define "main" }}
 <section class="blog-index">
-  <h1>Posts</h1>
-
   {{ $pages := .RegularPages.ByDate.Reverse }}
   {{ if $pages }}
     {{ range $pages.GroupByDate "2006" }}

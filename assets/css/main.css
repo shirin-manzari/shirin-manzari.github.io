@@ -13,7 +13,7 @@
   --code-bg: #f0e5d8;
   --code-inline-bg: #fff;
   --code-ink: var(--text);
-  --font-date: "Courier New", Courier, monospace;
+  --font-date: var(--font-body);
 }
 
 *,
@@ -295,7 +295,7 @@ li {
 .latest-post-list time {
   color: var(--muted);
   font-family: var(--font-date);
-  font-size: 18px;
+  font-size: 14px;
   line-height: 30px;
 }
 
@@ -311,7 +311,7 @@ li {
 .post-date {
   color: #575757;
   font-family: var(--font-date);
-  font-size: 18px;
+  font-size: 14px;
   line-height: 30px;
 }
 
@@ -332,7 +332,7 @@ li {
 .post-meta time {
   color: #575757;
   font-family: var(--font-date);
-  font-size: 18px;
+  font-size: 14px;
   line-height: 30px;
 }
 
