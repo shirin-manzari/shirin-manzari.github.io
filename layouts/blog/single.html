@@ -7,7 +7,6 @@
       <time datetime="{{ $.Date.Format "2006-01-02" }}">{{ $.Date.Format "January 2, 2006" }}</time>
     </p>
   </header>
-  <hr>
   <div class="article-body">
     <p><a href="{{ . }}">Continue to the original post</a></p>
   </div>
@@ -22,7 +21,6 @@
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
     </p>
   </header>
-  <hr>
   <div class="article-body" lang="{{ $contentLang }}" dir="{{ $contentDir }}">
     {{ .Content }}
   </div>
