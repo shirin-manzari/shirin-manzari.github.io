@@ -1,5 +1,5 @@
 ---
-title: "Tokens Are Not Words"
+title: "Tokens, Not Words"
 date: 2025-11-20
 pinned: false
 description: ""

@@ -1,6 +1,6 @@
 ---
 title: "Why Do Digital Assistants Have Female Voices? (fa)"
-date: 2026-10-06
+date: 2025-10-06
 pinned: false
 description: ""
 slug: "female-voices-digital-assistants"

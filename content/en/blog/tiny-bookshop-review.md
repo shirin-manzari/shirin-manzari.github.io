@@ -3,6 +3,7 @@ title: "A Cozy Game for Late Autumn Nights"
 date: 2026-10-03T15:25:22+03:30
 description: "Tiny Bookshop review"
 slug: "tiny-bookshop-review"
+image: "/assets/images/posts/tiny-bookshop-review/rainy-bookshop-gameplay.png"
 tags:
   - game
 content_language: "en"
@@ -10,8 +11,8 @@ selected: false
 # external_url: ""
 draft: false
 ---
-Sometimes, you just want a stress-free, comforting, cozy game to sink into at the end of the day. For me, that game was [Tiny Bookshop](https://store.steampowered.com/app/2133760/Tiny_Bookshop/).  
-Honestly, I picked it mostly because of the name. Lately I’m really into reading again. So, when I saw the title and also overwhelmingly positive Steam reviews, I knew it would be good.  
+Sometimes, you just want a stress-free, comforting, cozy game to sink into at the end of the day. For me, that game was [Tiny Bookshop](https://store.steampowered.com/app/2133760/Tiny_Bookshop/). Honestly, I picked it mostly because of the name. Lately I’m really into reading again. So, when I saw the title and also overwhelmingly positive Steam reviews, I knew it would be good. 
+![Tiny Bookshop Game](/assets/images/posts/tiny-bookshop-review/tiny-bookshop-gameplay.png "My bookshop on a rainy day in Tiny Bookshop")
 You’re a new face in town, running a tiny second-hand bookshop out of a wooden trailer attached to your car. Every morning, you stock the shelves, decorate your trailer, and choose a destination for the day.  
 Most of your tasks include deciding what books to stock, choosing where to open the shop for the day, talking to people, and trying to figure out what kind of book someone might enjoy more.  
 And as someone who likes books, the recommendation system is probably my favorite part. During these little challenges, where you help people find the right book, I actually came across a few titles that ended up on my own to-read list. The selection of books in the game feels curated and thoughtful, which makes this part really enjoyable.  
