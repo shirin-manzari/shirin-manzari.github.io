@@ -10,7 +10,7 @@
   --page-gutter: clamp(1rem, 4vw, 1.5rem);
   --font-body: "Segoe UI", sans-serif;
   --font-mono: Consolas, "Liberation Mono", "Segoe UI", monospace;
-  --code-bg: #f0e5d8;
+  --code-bg: #fcf8f3;
   --code-inline-bg: #fff;
   --code-ink: var(--text);
   --font-date: var(--font-body);
@@ -503,7 +503,7 @@ figcaption {
   text-align: center !important;
   vertical-align: middle;
   line-height: 1.5;
-  background: #fff;
+  background: var(--code-bg);
   color: var(--text);
   border: 1px solid var(--muted);
 }
@@ -516,13 +516,6 @@ figcaption {
   font-size: 0.875rem;
   letter-spacing: 0.015em;
   text-wrap: balance;
-}
-
-@media (hover: hover) {
-  .article-body tbody tr:hover > td,
-  .page-content tbody tr:hover > td {
-    background: color-mix(in srgb, var(--accent) 7%, white);
-  }
 }
 
 details {
