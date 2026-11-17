@@ -3,7 +3,7 @@ title: "Thinking in Bytes in a World of Gigabytes"
 date: 2026-11-17
 description: ""
 slug: "thinking-in-bytes-in-a-world-of-gigabytes"
-tags: 
+tags:
   - software-engineering
   - memory-management
   - python
@@ -12,8 +12,6 @@ content_language: "en"
 selected: false
 draft: false
 ---
-
-# Thinking in Bytes in a World of Gigabytes
 
 Some of the most useful software lessons I've learned came from the little embedded projects I built as a hobby. Working with microcontrollers and their limited RAM made me appreciate every byte and think twice before creating another buffer.
 

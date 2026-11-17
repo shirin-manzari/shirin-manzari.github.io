@@ -478,12 +478,14 @@ figcaption {
 
 .article-body table,
 .page-content table {
-  display: block;
   max-width: 100%;
   width: 100%;
-  overflow-x: auto;
+  table-layout: fixed;
   border-collapse: collapse;
-  -webkit-overflow-scrolling: touch;
+  margin-block: 1.25rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
 }
 
 .highlight {
@@ -492,14 +494,35 @@ figcaption {
   -webkit-overflow-scrolling: touch;
 }
 
-th,
-td {
-  padding: 0.35rem 0.5rem;
-  border: 1px solid var(--line);
+.article-body th,
+.article-body td,
+.page-content th,
+.page-content td {
+  padding: clamp(0.4rem, 1.2vw, 0.55rem) clamp(0.35rem, 1.5vw, 0.75rem);
+  overflow-wrap: anywhere;
+  text-align: center !important;
+  vertical-align: middle;
+  line-height: 1.5;
+  background: #fff;
+  color: var(--text);
+  border: 1px solid var(--muted);
 }
 
-th {
-  background: var(--surface);
+.article-body th,
+.page-content th {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.015em;
+  text-wrap: balance;
+}
+
+@media (hover: hover) {
+  .article-body tbody tr:hover > td,
+  .page-content tbody tr:hover > td {
+    background: color-mix(in srgb, var(--accent) 7%, white);
+  }
 }
 
 details {
