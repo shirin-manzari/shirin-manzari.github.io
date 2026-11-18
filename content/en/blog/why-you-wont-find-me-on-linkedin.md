@@ -1,5 +1,5 @@
 ---
-title: "Why You Won't Find Me on LinkedIn"
+title: "Why You Won't Find Me on LinkedIn Anymore"
 date: 2025-12-29
 pinned: false
 description: "The drama between me and LinkedIn, and why we’re never getting back together."
@@ -13,13 +13,9 @@ aliases:
   - /why-you-wont-find-me-on-linkedin/
 ---
 
-Back in 2017, in my first year of university, one of our seniors strongly suggested that we create a LinkedIn account, explaining how useful it could be for our future careers, particularly in our major, which is Software Engineering. So, like many others, I just followed their advice and signed up.
+During my first year of university, a senior strongly recommended LinkedIn, explaining how useful it could be for our future careers. So, like many others, I took their advice and signed up. Over time, I added my experience and gained a few hundred connections, mostly people I knew personally or through shared circles. Nothing special. I never really treated LinkedIn as a social network, just an online resume I’d update once a year.
 
-At the time, of course, I didn’t have much to showcase except the name of my university and some general information. Over time, I managed to expand my resume and add some work experience, awards, and even a few volunteer activities, which gained me a couple of hundred connections, that I Kinda know in real life or at least through mutual colleagues or shared circles.
-
-So, nothing special. I didn't use LinkedIn as a professional social network in the way some people do; I just used it out of necessity and as my online resume board. I’d drop by every couple of months, make a few updates and adjustments. I’m not saying it wasn’t helpful. It gives me a project here and a professional opportunity over there.
-
-But soon, this normal account and my very presence on the platform somehow got flagged. I lost access to my account without a clear explanation and was unable to create a new one in any way possible. But before I get into how that happened, I first want to explain why I never fully clicked with LinkedIn in the first place.
+But somehow, my perfectly ordinary account got flagged. I lost access without a clear explanation and couldn't create a new one, no matter what I tried. Before getting into that, though, I want to explain why I never really clicked with LinkedIn in the first place.
 
 ## The Overwhelming Game of Appearances
 
@@ -31,7 +27,7 @@ This whole competition for an average person like me feels exhausting and overwh
 
 ## My LinkedIn Account got restricted without any clear reason
 
-Despite all of this, I kept my account out of necessity for over 8 years. Like it or not, LinkedIn has become a required part of professional life in the tech industry. At this point, I quit my job and was planning to apply for a better position outside of the country, so the necessity became even higher for me. Inevitably, I started polishing my profile and applying.
+Despite all of this, I kept my account out of necessity for over 8 years. Like it or not, LinkedIn has become a required part of professional life in the tech industry. At this point, I quit my job and was planning to apply for a better position, so the necessity became even higher for me. Inevitably, I started polishing my profile and applying.
 
 But one day, without any warning, I was suddenly logged out and wasn’t able to log in to my account. Just to mention, I had never used any automated tools, engaged in suspicious activities, or broken any rules or professional etiquette in any way. Everything on my account was authentic.
 
@@ -51,4 +47,4 @@ Every time I created a new account, it was restricted or banned within a few hou
 
 I started digging around and found long Reddit threads full of people with similar stories. The pattern was the same: once LinkedIn decides you’re a “problem,” it’s almost impossible to come back and the platform doesn’t seem to care.
 
-So here I am, locked out of a platform I used for eight years. Not because I cheated, spammed, or did anything wrong, but because my identity documents don’t fit into their broken system and there’s no meaningful way to challenge that decision. At this point, I don’t have any plans to come back.
+So here I am, locked out of a platform because my identity documents don’t fit into their broken system, with no meaningful way to challenge the decision. At this point, I have no plans to return. Instead, I’ve created an [About](https://shirin-manzari.github.io/about) page, which you can check out.
