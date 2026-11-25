@@ -5,6 +5,7 @@ description: ""
 slug: "thinking-in-bytes-in-a-world-of-gigabytes"
 tags:
   - software-engineering
+  - development
   - memory-management
   - python
   - embedded-systems
