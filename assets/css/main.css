@@ -275,6 +275,71 @@ li {
   color: var(--muted);
 }
 
+.resume-content {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.resume-content .page-header {
+  margin-block-end: 0.4rem;
+}
+
+.resume-content h1 {
+  margin-block-end: 0.5rem;
+}
+
+.resume-content h2 {
+  margin-block: 1.25rem 0.5rem;
+  padding-block-end: 0.25rem;
+  border-block-end: 1px solid #8f8f8f;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.resume-content h3 {
+  margin-block: 0.9rem 0.15rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.resume-content p,
+.resume-content ul {
+  margin-block-end: 0.55rem;
+}
+
+.resume-content strong {
+  font-weight: 600;
+}
+
+.resume-content li + li {
+  margin-block-start: 0.1rem;
+}
+
+.resume-role {
+  margin-block-end: 0.35rem;
+  font-weight: 600;
+}
+
+.resume-contact,
+.resume-meta {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.resume-contact {
+  overflow-wrap: anywhere;
+}
+
+.resume-meta strong {
+  color: var(--text);
+  font-weight: 400;
+}
+
+.resume-content li {
+  line-height: 1.45;
+}
+
 .plain-list {
   display: grid;
   gap: 0.22rem;

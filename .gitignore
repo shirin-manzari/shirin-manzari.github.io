@@ -26,3 +26,11 @@ Desktop.ini
 # Logs and temporary files
 *.log
 *.tmp
+
+skills/
+
+# Local Impeccable tools and generated files
+.impeccable/
+.github/skills/impeccable/
+.github/agents/impeccable-*.agent.md
+.github/hooks/impeccable.json
